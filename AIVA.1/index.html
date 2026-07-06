@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIVA — Agency Intelligence & Vision Architecture</title>
+  <meta name="description" content="AIVA is a bold, full-service creative agency crafting brands, digital experiences, and campaigns that move people and drive results.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Interactive particle canvas background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Floating Navigation Layer -->
+  <nav id="navbar" class="navbar liquid-glass">
+    <div class="nav-logo" onclick="navigate('home')" id="nav-logo">aiva</div>
+    <div class="nav-links" id="nav-links">
+      <a href="#" onclick="navTo(event,'home')">Home</a>
+      <a href="#" onclick="navTo(event,'about')">About</a>
+      <a href="#" onclick="navTo(event,'portfolio')">Portfolio</a>
+      <a href="#" onclick="navTo(event,'testimonials')">Testimonials</a>
+      <a href="#" onclick="navTo(event,'contact')">Contact</a>
+    </div>
+    <div class="nav-actions" id="nav-actions">
+      <button class="btn-glass btn-sm" id="nav-login-btn" onclick="navigate('login')">Login →</button>
+    </div>
+  </nav>
+
+  <!-- App mount point -->
+  <div id="app"></div>
+
+  <!-- Scroll indicator (public site only) -->
+  <div class="scroll-indicator" id="scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-dot"></div>
+    </div>
+    <span style="font-size:0.6rem;letter-spacing:0.12em;opacity:0.4;">SCROLL</span>
+  </div>
+
+  <script src="bg.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
